@@ -1,0 +1,15 @@
+{% extends "learning_logs/base.html" %}
+{% block content %}
+<h2>All post</h2>
+<ul>
+	{% for posts in all_Post %}
+	<li> 
+	<p> Topic:<b> {{ posts.topic }} </b></p>
+	<p> Date added: {{ posts.date_added }} </p>
+	<p> {{ posts.text }} </p>
+	</li>
+	{% empty %}
+	<li> No stuff </li>
+	{% endfor %}
+</ul>
+{% endblock content %}
